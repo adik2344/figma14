@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/*------------ Header ------------*/
+.header{
+    display: flex;
+    position: sticky;
+    top:0px;    
+
+    justify-content: space-between;
+    /* position: relative; */
+    height: 110px;
+    z-index: 10;
+    background-color: #fff;
+    overflow: hidden;
+}
+@media (max-width:700px){
+    .header, .logo-img{
+        height: 200px;
+        display: block;
+        justify-content: center;
+    }
+}
+/*--------- Logo--------- */
+.logo-img{
+    position: relative;
+    left: 5px;
+    height: 100px;
+    width: 20%;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+@media (max-width:700px){
+    .logo-img{
+        width: 70%;
+        display: flex;
+        margin: 0px auto;
+        justify-content: center;
+
+    }
+}
+/* /logo */
+/* --------- Menu ---------*/
+.main-menu-row{
+    position: relative;
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.main-menu-row a.main-menu-box{
+    padding: 3px;
+    border: 1px solid #D1A954;
+}
+.main-menu-row a{
+    text-decoration: none;
+    color: #D1A954;
+    display: inline-block;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    margin: 5px;
+    text-transform: uppercase;
+}/* /menu  */
+/* --------- Burger menu --------- */
+.ext-menu{
+    position: relative;
+    width: 50px;
+    overflow: hidden;
+    background: #ffffff;
+    height: inherit;
+}
+@media (max-width:700px){
+    .ext-menu{
+        width: 70%;
+        display: flex;
+        margin: 0px auto;
+        justify-content: center;
+
+    }
+    .main-menu-row{
+        display: none;
+    }
+}
+.ext-menu span,
+.ext-menu span::after,
+.ext-menu span::before{
+    display: block;
+    width: 33px;
+    height: 3px;
+    margin-bottom: 7px;
+    position: relative;
+    top: 40%;
+    background: #D1A954;
+    border-radius: 2px;
+    z-index: 1;
+}
+.ext-menu span::after{
+    content: '';
+    top: 7px;
+}
+.ext-menu span::before{
+    content: '';
+    top: 8px;
+}
+/* /burger menu */
+/*------------ header ------------ */
+/*------------ Gallery ------------*/
+.gallery{
+    display: none;
+    justify-content: stretch;
+    position: relative;
+    padding-top: 50px;
+    height: 200px;
+}
+.gallery img{
+    position: absolute;
+    margin: 10px;
+    max-width: 250px;
+    height: auto;
+}
+.desc{
+    position: absolute;
+    border: 1px solid;
+}
+p{
+    width: 100px;
+}
