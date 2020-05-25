@@ -114,6 +114,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .wrapper   .gallery {
       margin: 10px auto;
@@ -132,6 +133,7 @@ a{
 @media (max-width:1500px){
     .gallery{
         width: 300px;
+        font-size: 14px;
     }
 }
 .gallery img {
@@ -142,41 +144,21 @@ a{
 
 .rect-shadow{
     border: 1px solid green;
-    /* height: ; */
-    /* z-index: 5; */
+    margin: 20px;
+    height: 50px;
 }
-/* .desc{ 
-    opacity: 0;
+
+.description-wrapper{ 
     position: absolute;
-    display: flex;
-    justify-content: last baseline;
-    align-items: flex-end;
-    overflow: hidden;
-    width: 10px;
-    height: 30%;
-    background: rgba(209, 169, 84, 0.9);
-    color: #fff;
-    transition: all 0.9s ease;
-} */
-.desc{ 
-    opacity: 0;
-    position: absolute;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    /* overflow: hidden; */
-    width: 100% ;
-    height: 10px;
-    padding-top: 0px;
-    
-    margin-top: 100%;
+    bottom: 0px;
+    width: 100%;
+    height: 0px;
     background: rgba(209, 169, 84, 0.9);
     color: #fff;
     transition: all 0.9s ease;
 }
-.desc p {
+.description-wrapper p {
     transition: all 0.9s ease;
-    /* transform: scale(0.1); */
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -186,16 +168,20 @@ a{
     text-transform: uppercase;
   
 }
+
+.border-line {
+    border: 1px solid green;
+    margin: 20px 15px;
+}
+
 .desc span{
     text-align: center;
     margin: 3px auto;
 }
   
-.gallery:hover .desc {
+.gallery:hover .description-wrapper {
     opacity: 0.8;
-    height: 30%;
-    margin-top: 40%;
-
+    height: 35%;
     width: 100%;
     transition: all 0.5s ease;
 }
@@ -214,7 +200,7 @@ a{
       transform: scale(0.9);
     }
   } */
-  @media (min-width: 600px; max-width: 1000px) {
+  @media (min-width: 600px, max-width: 1000px) {
     .wrapper {
     margin: 0px auto;
     transform: scale(0.8);
@@ -225,13 +211,4 @@ a{
       margin: 10px auto;
     }
   }
-  @media (max-width: 600px) {
-    .wrapper {
-    margin: 0px auto;
-    display: block;
-    justify-content: center;
-    }
-    .wrapper >  .gallery{
-      margin: 10px auto;
-    }
-  }
+
