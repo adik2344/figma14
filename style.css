@@ -13,29 +13,21 @@ a{
 .header{
     display: flex;
     position: sticky;
-    top:0px;    
+    top: 0px;
     background-color: #fff;
-
-    justify-content: center;
-    height: 110px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    height: 150px;
     z-index: 10;
     overflow: hidden;
 }
-/* @media (max-width:700px){
-    .header, .logo-img{
-        height:110px;
-        display: flex;
-        justify-content: center;
-    }
-} */
 /*--------- Logo--------- */
 .logo-img{
     display: flex;
-    position: relative;
     height: 87px;
     width: 160px;
     justify-content: center;
-    margin: 0px auto;
 }
 @media (max-width:700px){
     .logo-img{
@@ -49,7 +41,6 @@ a{
 /* /logo */
 /* --------- Menu ---------*/
 .main-menu-row{
-    position: relative;
     display: flex;
     margin: 20px;
     justify-content: center;
@@ -73,16 +64,6 @@ a{
     text-transform: uppercase;
 }/* /menu  */
 /* --------- Burger menu --------- */
-.ext-menu{
-    position: relative;
-    width: 50px;
-    overflow: hidden;
-    background: #ffffff;
-    height: inherit;
-    top: 40px;
-    /* align-items: center; */
-}
-
 .ext-menu span,
 .ext-menu span::after,
 .ext-menu span::before{
